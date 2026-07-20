@@ -1,62 +1,105 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HAVEN</title>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#061f33">
+    <title>Haven Cafe Menu | Osara, Salalah</title>
+    <meta
+      name="description"
+      content="Explore Haven Cafe's bilingual menu of hot drinks, iced drinks and desserts in Osara, Salalah."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Naskh+Arabic:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <header class="topbar" id="topbar">
+      <a class="topbar-brand" href="#home" aria-label="Haven menu home">
+        <b>HAVEN</b>
+      </a>
+      <p>Osara, Salalah</p>
+      <a class="chapter-menu" href="#home" aria-label="Choose another menu chapter">
+        <span></span><span></span><span></span>
+      </a>
+    </header>
 
-<style>
+    <main>
+      <section class="opening" id="home" aria-labelledby="openingTitle">
+        <div class="opening-brand">
+          <img
+            src="assets/img/haven-logo-original.jpg"
+            alt="Haven Cafe"
+            width="700"
+            height="400"
+            fetchpriority="high"
+          >
+          <p>Osara <span></span> Salalah</p>
+        </div>
 
-body{
-background:#061b2c;
-font-family:Georgia,serif;
-color:white;
-text-align:center;
-padding:60px;
-}
+        <header class="opening-heading">
+          <p class="eyebrow">Menu <i></i> القائمة</p>
+          <h1 id="openingTitle">Choose your Haven</h1>
+          <p lang="ar" dir="rtl">اختر تجربتك</p>
+        </header>
 
-h1{
-font-size:52px;
-letter-spacing:8px;
-}
+        <nav class="chapter-list" aria-label="Menu chapters">
+          <a class="chapter-door chapter-door-hot" href="#hot">
+            <span class="chapter-number">01</span>
+            <span class="chapter-label">
+              <b>Hot Drinks</b>
+              <em lang="ar" dir="rtl">المشروبات الساخنة</em>
+            </span>
+            <span class="chapter-arrow" aria-hidden="true">&#8594;</span>
+          </a>
+          <a class="chapter-door chapter-door-iced" href="#iced">
+            <span class="chapter-number">02</span>
+            <span class="chapter-label">
+              <b>Iced Drinks</b>
+              <em lang="ar" dir="rtl">المشروبات الباردة</em>
+            </span>
+            <span class="chapter-arrow" aria-hidden="true">&#8594;</span>
+          </a>
+          <a class="chapter-door chapter-door-sweets" href="#sweets">
+            <span class="chapter-number">03</span>
+            <span class="chapter-label">
+              <b>Sweets &amp; Desserts</b>
+              <em lang="ar" dir="rtl">الحلويات</em>
+            </span>
+            <span class="chapter-arrow" aria-hidden="true">&#8594;</span>
+          </a>
+        </nav>
+      </section>
 
-p{
-font-size:22px;
-color:#d7c28b;
-}
+      <section class="chapter-view" id="chapterView" hidden>
+        <header class="chapter-hero" id="chapterHero">
+          <div>
+            <p class="chapter-index" id="chapterIndex"></p>
+            <h2 id="chapterTitle"></h2>
+            <p id="chapterArabic" lang="ar" dir="rtl"></p>
+          </div>
+        </header>
+        <nav class="subcategory-nav" id="subcategoryNav" aria-label="Chapter sections"></nav>
+        <div class="chapter-menu-list" id="menu" aria-live="polite"></div>
+      </section>
+    </main>
 
-a{
+    <footer class="site-footer">
+      <div>
+        <p>Prices in OMR. Availability may vary.</p>
+        <p lang="ar" dir="rtl">الأسعار بالريال العماني.</p>
+      </div>
+      <nav aria-label="Alternative menu formats">
+        <a href="print.html">Print menu</a>
+        <a href="menu.pdf">Original PDF</a>
+      </nav>
+    </footer>
 
-display:inline-block;
-margin-top:40px;
-padding:18px 36px;
-
-background:#cba867;
-
-border-radius:100px;
-
-color:#061b2c;
-
-font-weight:bold;
-
-text-decoration:none;
-
-font-size:22px;
-
-}
-
-</style>
-
-</head>
-
-<body>
-
-<h1>HAVEN</h1>
-
-<p>Welcome to Your Haven مرحبًا بكم في هيفن.</p>
-
-<a href="menu.pdf">View Menu</a>
-
-</body>
-
+    <script src="assets/js/menu-data.js"></script>
+    <script src="assets/js/menu.js"></script>
+  </body>
 </html>
