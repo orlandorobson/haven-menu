@@ -11,12 +11,17 @@ output/strategy/**/page-*.png
 # Generated signboard review proofs
 assets/signboards/haven-cold-brew-distance-check-v*.png
 assets/signboards/haven-cold-brew-layout-proof-v*.png
+assets/signboards/haven-cold-brew-photo-master-v1.png
+assets/signboards/haven-cold-brew-photo-master-v2.png
+assets/signboards/haven-cold-brew-photo-master-v2-refined.png
 
 # Large local printer deliverables
 output/print/HAVEN_COLD_BREW_PRINTER_PACK/
 output/print/HAVEN_COLD_BREW_PRINTER_PACK_*.zip
 assets/signboards/*.tif
 output/print/**/*.tif
+output/pdf/HAVEN_COLD_BREW_PRINT_*.pdf
+output/pdf/haven-cold-brew-42x72cm-print-outlined.pdf
 
 # Local font copies pending redistribution review
 assets/signboards/fonts/
