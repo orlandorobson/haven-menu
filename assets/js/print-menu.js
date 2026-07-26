@@ -71,8 +71,8 @@
     <section class="sheet">
       ${renderHeader(true)}
       <section class="print-menu print-menu-continuation">
-        ${renderColumn(["chocolate-and-specials", "mojitos", "water"])}
-        ${renderColumn(["tea", "smoothies-and-shakes", "desserts"])}
+        ${renderColumn(["chocolate-and-specials", "mojitos", "sandwiches"])}
+        ${renderColumn(["tea", "smoothies-and-shakes", "desserts", "water"])}
       </section>
       ${renderFooter()}
     </section>`;

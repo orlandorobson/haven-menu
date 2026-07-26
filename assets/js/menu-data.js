@@ -513,6 +513,44 @@ window.HAVEN_MENU = {
       ]
     },
     {
+      id: "sandwiches",
+      name: "Sandwiches",
+      arabicName: "السندويشات",
+      description: "Generous sandwiches prepared for Haven by a specialist kitchen and served warm.",
+      arabicDescription: "سندويشات سخية تحضر لهيفن في مطبخ متخصص وتقدم دافئة.",
+      items: [
+        {
+          id: "halloumi-sandwich",
+          name: "Halloumi & Tomato",
+          arabicName: "ساندويتش حلوم وطماطم",
+          description: "Warm halloumi with tomato and crisp lettuce in a long brown roll.",
+          arabicDescription: "حلوم دافئ مع الطماطم والخس المقرمش في خبز أسمر طويل.",
+          price: 1.9,
+          tags: ["Sandwich"]
+        },
+        {
+          id: "chicken-sandwich",
+          name: "Seasoned Chicken",
+          arabicName: "ساندويتش دجاج متبل",
+          description: "Warm seasoned chicken with crisp shredded cabbage in brown bread.",
+          arabicDescription: "دجاج متبل ودافئ مع ملفوف مقرمش في خبز أسمر.",
+          price: 1.9,
+          tags: ["Sandwich"]
+        },
+        {
+          id: "turkey-sandwich",
+          name: "Turkey & Cheese",
+          arabicName: "ساندويتش ديك رومي وجبن",
+          description: "Warm turkey and cheese with tomato and lettuce in a long brown roll.",
+          arabicDescription: "شرائح ديك رومي دافئة مع الجبن والطماطم والخس في خبز أسمر طويل.",
+          price: 1.9,
+          tags: ["Sandwich"],
+          image: "assets/img/haven-turkey-sandwich-real.jpg",
+          featured: true
+        }
+      ]
+    },
+    {
       id: "desserts",
       name: "Sweets & Cakes",
       arabicName: "الحلويات والكيك",

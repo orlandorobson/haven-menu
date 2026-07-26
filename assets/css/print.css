@@ -42,6 +42,7 @@ body {
 }
 
 .print-header {
+  flex-shrink: 0;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -82,7 +83,7 @@ h3 {
 }
 
 .print-header-compact {
-  padding-block: 6mm;
+  padding-block: 4mm;
 }
 
 .print-header-compact h1 {
@@ -119,7 +120,15 @@ h3 {
 }
 
 .print-menu-continuation {
-  margin-top: 7mm;
+  margin-top: 2mm;
+}
+
+.print-menu-continuation .print-section {
+  margin-bottom: 2.5mm;
+}
+
+.print-menu-continuation article {
+  padding-block: 0.75mm;
 }
 
 .print-column {
@@ -203,6 +212,7 @@ strong {
 }
 
 footer {
+  flex-shrink: 0;
   position: static;
   display: flex;
   justify-content: space-between;

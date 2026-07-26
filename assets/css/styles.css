@@ -231,6 +231,11 @@ a {
   background-position: center 58%;
 }
 
+.chapter-door-sandwiches {
+  background-image: url("../img/haven-turkey-sandwich-real.jpg");
+  background-position: center 43%;
+}
+
 .chapter-door-sweets {
   background-image: url("../img/haven-brownie-web.jpg");
   background-position: center 53%;

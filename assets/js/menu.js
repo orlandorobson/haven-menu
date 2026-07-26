@@ -34,8 +34,17 @@
       }
     },
     {
-      id: "sweets",
+      id: "sandwiches",
       index: "Chapter 03",
+      name: "Sandwiches",
+      arabicName: "السندويشات",
+      image: "assets/img/haven-turkey-sandwich-real.jpg",
+      imagePosition: "center 43%",
+      matches: (item) => item.tags.includes("Sandwich")
+    },
+    {
+      id: "sweets",
+      index: "Chapter 04",
       name: "Sweets & Desserts",
       arabicName: "الحلويات",
       image: "assets/img/haven-brownie-web.jpg",
