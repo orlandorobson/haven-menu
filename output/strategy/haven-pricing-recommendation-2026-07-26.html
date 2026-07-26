@@ -1,0 +1,816 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Haven Cafe Pricing Recommendation - 26 July 2026</title>
+  <style>
+    :root {
+      --paper: #f7f2e8;
+      --blue: #08283d;
+      --silver: #bcc3c7;
+      --red: #8b2429;
+      --ink: #172b35;
+      --muted: #5f6c72;
+      --rule: #c9c4ba;
+      --pale-blue: #e7ecee;
+      --pale-red: #f1e5e2;
+      --white: #fffdf8;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #d8d8d8;
+      color: var(--ink);
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 9.5pt;
+      line-height: 1.42;
+      letter-spacing: 0;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    .page {
+      position: relative;
+      width: 210mm;
+      height: 297mm;
+      margin: 0 auto 8mm;
+      padding: 18mm 18mm 16mm;
+      overflow: hidden;
+      background: var(--paper);
+      break-after: page;
+      page-break-after: always;
+    }
+
+    .page:last-child {
+      break-after: auto;
+      page-break-after: auto;
+    }
+
+    .cover {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      background: var(--blue);
+      color: var(--white);
+    }
+
+    .cover-field {
+      flex: 1;
+      padding: 24mm 22mm 18mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .brand {
+      color: var(--silver);
+      font-family: "Cormorant Garamond", Baskerville, Georgia, serif;
+      font-size: 47pt;
+      font-weight: 500;
+      line-height: 0.9;
+      letter-spacing: 0.12em;
+    }
+
+    .cover-kicker {
+      margin-top: 5mm;
+      color: var(--silver);
+      font-size: 8pt;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .cover-title {
+      max-width: 150mm;
+      margin: 0;
+      color: var(--white);
+      font-family: "Cormorant Garamond", Baskerville, Georgia, serif;
+      font-size: 35pt;
+      font-weight: 500;
+      line-height: 1.02;
+    }
+
+    .cover-subtitle {
+      max-width: 128mm;
+      margin: 6mm 0 0;
+      color: #d9dfe2;
+      font-size: 12pt;
+      line-height: 1.5;
+    }
+
+    .cover-meta {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 8mm;
+      border-top: 0.35mm solid rgba(188, 195, 199, 0.65);
+      color: var(--silver);
+      font-size: 8pt;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .cover-accent {
+      height: 8mm;
+      background: var(--red);
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1, h2 {
+      font-family: "Cormorant Garamond", Baskerville, Georgia, serif;
+      color: var(--blue);
+      font-weight: 600;
+    }
+
+    h1 {
+      margin-bottom: 4mm;
+      font-size: 27pt;
+      line-height: 1;
+    }
+
+    h2 {
+      margin-bottom: 3mm;
+      font-size: 17pt;
+      line-height: 1.1;
+    }
+
+    h3 {
+      margin-bottom: 1.5mm;
+      color: var(--red);
+      font-size: 8pt;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    p { margin-bottom: 3mm; }
+
+    .eyebrow {
+      margin-bottom: 3mm;
+      color: var(--red);
+      font-size: 7.5pt;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .standfirst {
+      max-width: 160mm;
+      margin-bottom: 8mm;
+      color: var(--muted);
+      font-family: "Cormorant Garamond", Baskerville, Georgia, serif;
+      font-size: 14pt;
+      line-height: 1.35;
+    }
+
+    .top-rule {
+      width: 20mm;
+      margin-bottom: 8mm;
+      border-top: 1.2mm solid var(--red);
+    }
+
+    .page-footer {
+      position: absolute;
+      left: 18mm;
+      right: 18mm;
+      bottom: 8mm;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 2.5mm;
+      border-top: 0.25mm solid var(--rule);
+      color: var(--muted);
+      font-size: 6.8pt;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7mm;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4mm;
+    }
+
+    .decision {
+      min-height: 35mm;
+      padding: 4.5mm;
+      border-top: 0.8mm solid var(--blue);
+      background: rgba(255, 253, 248, 0.7);
+    }
+
+    .decision.conditional {
+      border-top-color: var(--red);
+      background: var(--pale-red);
+    }
+
+    .decision strong {
+      display: block;
+      margin-bottom: 1mm;
+      color: var(--blue);
+      font-family: "Cormorant Garamond", Baskerville, Georgia, serif;
+      font-size: 13pt;
+    }
+
+    .price {
+      color: var(--red);
+      font-size: 11pt;
+      font-weight: 700;
+    }
+
+    .status {
+      display: block;
+      margin-top: 2mm;
+      color: var(--blue);
+      font-size: 6.5pt;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 0 6mm;
+      font-size: 8.2pt;
+    }
+
+    th {
+      padding: 2.2mm 1.8mm;
+      border-bottom: 0.6mm solid var(--blue);
+      color: var(--blue);
+      font-size: 6.5pt;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-align: left;
+      text-transform: uppercase;
+    }
+
+    td {
+      padding: 2.1mm 1.8mm;
+      border-bottom: 0.25mm solid var(--rule);
+      vertical-align: top;
+    }
+
+    td.num, th.num {
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    tr.highlight td {
+      color: var(--red);
+      font-weight: 700;
+    }
+
+    .market-band {
+      display: grid;
+      grid-template-columns: 42mm 1fr 18mm;
+      gap: 3mm;
+      align-items: center;
+      margin-bottom: 3.6mm;
+    }
+
+    .market-band .label {
+      font-weight: 600;
+    }
+
+    .track {
+      position: relative;
+      height: 4mm;
+      background: #ddd9cf;
+    }
+
+    .range {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      background: var(--pale-blue);
+      border-left: 0.5mm solid var(--blue);
+      border-right: 0.5mm solid var(--blue);
+    }
+
+    .marker {
+      position: absolute;
+      top: -1.3mm;
+      width: 1.4mm;
+      height: 6.6mm;
+      background: var(--red);
+    }
+
+    .market-band .value {
+      color: var(--red);
+      font-weight: 700;
+      text-align: right;
+    }
+
+    .comparison-page .standfirst { margin-bottom: 5mm; }
+    .comparison-page .market-band { margin-bottom: 2.6mm; }
+    .comparison-page .legend { margin-bottom: 4mm; }
+    .comparison-page h2 { margin-bottom: 2mm; }
+    .comparison-page table {
+      margin-bottom: 3mm;
+      font-size: 7.8pt;
+    }
+    .comparison-page td { padding: 1.6mm 1.8mm; }
+
+    .economics-page .standfirst { margin-bottom: 5mm; }
+    .economics-page .metric { padding: 4mm 3mm; }
+    .economics-page .callout {
+      margin: 4mm 0;
+      padding: 4mm 5mm;
+    }
+    .economics-page .plain-list li { margin-bottom: 1.5mm; }
+    .economics-page .note { padding: 3mm; }
+    .economics-page h2[style] { margin-top: 4mm !important; }
+
+    .legend {
+      display: flex;
+      gap: 6mm;
+      margin: 1mm 0 7mm 45mm;
+      color: var(--muted);
+      font-size: 6.5pt;
+    }
+
+    .legend span::before {
+      display: inline-block;
+      width: 3mm;
+      height: 2mm;
+      margin-right: 1.5mm;
+      content: "";
+      background: var(--pale-blue);
+      border-left: 0.4mm solid var(--blue);
+    }
+
+    .legend .haven::before {
+      width: 1.2mm;
+      background: var(--red);
+      border: 0;
+    }
+
+    .metric {
+      padding: 5mm 4mm;
+      border-top: 0.8mm solid var(--blue);
+      background: var(--white);
+    }
+
+    .metric .number {
+      display: block;
+      margin-bottom: 1mm;
+      color: var(--red);
+      font-family: "Cormorant Garamond", Baskerville, Georgia, serif;
+      font-size: 25pt;
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    .metric .caption {
+      color: var(--muted);
+      font-size: 7pt;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .callout {
+      margin: 6mm 0;
+      padding: 5mm 6mm;
+      border-left: 1.2mm solid var(--red);
+      background: var(--pale-red);
+      color: var(--blue);
+      font-family: "Cormorant Garamond", Baskerville, Georgia, serif;
+      font-size: 13pt;
+      line-height: 1.35;
+    }
+
+    .note {
+      padding: 4mm;
+      background: var(--pale-blue);
+      color: var(--ink);
+      font-size: 8.2pt;
+    }
+
+    .plain-list,
+    .number-list {
+      margin: 0;
+      padding-left: 5mm;
+    }
+
+    .plain-list li,
+    .number-list li {
+      margin-bottom: 2.2mm;
+      padding-left: 1mm;
+    }
+
+    .price-ladder {
+      margin: 3mm 0 6mm;
+      border-left: 0.6mm solid var(--blue);
+    }
+
+    .ladder-row {
+      display: grid;
+      grid-template-columns: 1fr 24mm;
+      gap: 4mm;
+      padding: 2.4mm 3mm;
+      border-bottom: 0.25mm solid var(--rule);
+    }
+
+    .ladder-row.signature {
+      background: var(--pale-red);
+    }
+
+    .ladder-row .amount {
+      color: var(--red);
+      font-weight: 700;
+      text-align: right;
+    }
+
+    .source-list {
+      columns: 2;
+      column-gap: 9mm;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 7.1pt;
+      line-height: 1.35;
+    }
+
+    .source-list li {
+      break-inside: avoid;
+      margin-bottom: 3mm;
+      padding-bottom: 2mm;
+      border-bottom: 0.2mm solid var(--rule);
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    .small {
+      color: var(--muted);
+      font-size: 7.2pt;
+    }
+
+    @media print {
+      html, body { background: transparent; }
+      .page { margin: 0; }
+    }
+  </style>
+</head>
+<body>
+  <section class="page cover">
+    <div class="cover-field">
+      <div>
+        <div class="brand">HAVEN</div>
+        <div class="cover-kicker">Osara, Salalah</div>
+      </div>
+      <div>
+        <h1 class="cover-title">Menu Pricing Recommendation</h1>
+        <p class="cover-subtitle">A comparative review of Dhofar, Oman and regional cafe pricing, with recommendations for internal menu consistency.</p>
+      </div>
+      <div class="cover-meta">
+        <span>Internal discussion document</span>
+        <span>26 July 2026</span>
+      </div>
+    </div>
+    <div class="cover-accent"></div>
+  </section>
+
+  <section class="page">
+    <div class="eyebrow">Executive decision</div>
+    <h1>The proposed prices remain competitive</h1>
+    <p class="standfirst">Most of the Head Barista's proposed changes place Haven near the middle of the Salalah specialty-cafe market and below premium Muscat and GCC price anchors.</p>
+    <div class="grid-3">
+      <div class="decision"><strong>Iced Spanish Latte</strong><span class="price">OMR 1.800</span><span class="status">Approve</span></div>
+      <div class="decision"><strong>Iced Latte</strong><span class="price">OMR 1.600</span><span class="status">Approve</span></div>
+      <div class="decision"><strong>Iced Hazelnut Latte</strong><span class="price">OMR 1.700</span><span class="status">Approve</span></div>
+      <div class="decision"><strong>All Iced Teas</strong><span class="price">OMR 1.500</span><span class="status">Approve</span></div>
+      <div class="decision"><strong>All Mojitos</strong><span class="price">OMR 1.700</span><span class="status">Approve with product proof</span></div>
+      <div class="decision conditional"><strong>Brownie</strong><span class="price">OMR 2.500</span><span class="status">Conditional</span></div>
+      <div class="decision"><strong>San Sebastian</strong><span class="price">OMR 1.800</span><span class="status">Approve</span></div>
+      <div class="decision"><strong>Chocolate Cheesecake</strong><span class="price">OMR 1.800</span><span class="status">Approve</span></div>
+      <div class="decision"><strong>Iced Dark / White Mocha</strong><span class="price">OMR 1.800</span><span class="status">Approve</span></div>
+    </div>
+    <div class="callout">San Sebastian at OMR 1.800 would still be one of the strongest-value offers in its direct Salalah comparison set.</div>
+    <div class="grid-2">
+      <div>
+        <h3>Principal reservation</h3>
+        <p>Brownie at OMR 2.500 is premium for Salalah. The serving must visibly justify it through portion, chocolate quality, ice cream, sauce or presentation.</p>
+      </div>
+      <div>
+        <h3>Important caveat</h3>
+        <p>July is within Khareef. Current sales are affected by tourism, holiday behaviour and greater customer traffic, so volume alone cannot prove price sensitivity.</p>
+      </div>
+    </div>
+    <div class="page-footer"><span>Haven Cafe · Internal pricing review</span><span>2</span></div>
+  </section>
+
+  <section class="page comparison-page">
+    <div class="eyebrow">Market position</div>
+    <h1>Haven remains accessible within specialty coffee</h1>
+    <p class="standfirst">The pale band shows the observed Salalah range. The red marker shows Haven's proposed price. Direct counter evidence is used where available; delivery-only figures are treated as market signals, not assumed in-store prices.</p>
+
+    <div class="market-band">
+      <div class="label">Iced Spanish Latte</div>
+      <div class="track"><span class="range" style="left:20%;width:68%"></span><span class="marker" style="left:46%"></span></div>
+      <div class="value">1.800</div>
+    </div>
+    <div class="market-band">
+      <div class="label">Iced Latte</div>
+      <div class="track"><span class="range" style="left:16%;width:35%"></span><span class="marker" style="left:27%"></span></div>
+      <div class="value">1.600</div>
+    </div>
+    <div class="market-band">
+      <div class="label">Iced Tea</div>
+      <div class="track"><span class="range" style="left:12%;width:30%"></span><span class="marker" style="left:20%"></span></div>
+      <div class="value">1.500</div>
+    </div>
+    <div class="market-band">
+      <div class="label">Mojito</div>
+      <div class="track"><span class="range" style="left:8%;width:34%"></span><span class="marker" style="left:34%"></span></div>
+      <div class="value">1.700</div>
+    </div>
+    <div class="market-band">
+      <div class="label">San Sebastian</div>
+      <div class="track"><span class="range" style="left:26%;width:62%"></span><span class="marker" style="left:20%"></span></div>
+      <div class="value">1.800</div>
+    </div>
+    <div class="market-band">
+      <div class="label">Brownie</div>
+      <div class="track"><span class="range" style="left:12%;width:34%"></span><span class="marker" style="left:64%"></span></div>
+      <div class="value">2.500</div>
+    </div>
+    <div class="legend"><span>Observed Salalah range</span><span class="haven">Haven proposal</span></div>
+
+    <h2>Selected direct comparisons</h2>
+    <table>
+      <thead><tr><th>Establishment</th><th>Comparable item</th><th class="num">OMR</th></tr></thead>
+      <tbody>
+        <tr><td>Hills Cafe, Salalah</td><td>Iced Spanish Latte / Iced Latte / San Sebastian</td><td class="num">1.600 / 1.400 / 2.000</td></tr>
+        <tr><td>Rovana, Salalah · counter</td><td>Cold Spanish / Latte / Dark Mocha</td><td class="num">1.800 / 1.700 / 1.800</td></tr>
+        <tr><td>Black Drop, Salalah</td><td>Cold Spanish / Iced Hazelnut / San Sebastian</td><td class="num">1.500 / 1.600 / 2.500</td></tr>
+        <tr><td>X Cafe, Salalah</td><td>Iced Tea / Iced Mocha / San Sebastian</td><td class="num">1.700 / 2.000 / 2.100</td></tr>
+        <tr><td>2 Oz, Salalah · counter</td><td>Cold Spanish / Iced Tea / San Sebastian</td><td class="num">1.400 / 1.300 / 1.900</td></tr>
+        <tr><td>Mute, Salalah</td><td>Spanish Latte / San Sebastian</td><td class="num">1.900 / 2.700</td></tr>
+        <tr><td>Hurof, Salalah</td><td>Cold Spanish / San Sebastian Chocolate</td><td class="num">2.500 / 3.000</td></tr>
+      </tbody>
+    </table>
+    <p class="small">Counter figures are from dated physical-menu photographs. Remaining comparisons may be delivery prices and can include platform pricing, discounts or accompaniments. Elaborate servings are not exact equivalents to a plain slice.</p>
+    <div class="page-footer"><span>Haven Cafe · Dhofar comparisons</span><span>3</span></div>
+  </section>
+
+  <section class="page">
+    <div class="eyebrow">Channel validation</div>
+    <h1>Talabat prices are not reliable counter prices</h1>
+    <p class="standfirst">A July 2026 photograph of 2 Oz's physical menu allows a same-cafe, same-period comparison with its Talabat listing. Every matched item is higher on Talabat, but the premium varies by product.</p>
+
+    <table>
+      <thead><tr><th>2 Oz item</th><th class="num">Counter</th><th class="num">Talabat</th><th class="num">Difference</th></tr></thead>
+      <tbody>
+        <tr><td>Cold Spanish Latte</td><td class="num">1.400</td><td class="num">1.500</td><td class="num">+7.1%</td></tr>
+        <tr><td>Cold Latte</td><td class="num">1.200</td><td class="num">1.400</td><td class="num">+16.7%</td></tr>
+        <tr><td>Cold Hazelnut Latte</td><td class="num">1.500</td><td class="num">1.800</td><td class="num">+20.0%</td></tr>
+        <tr><td>Cold Mocha / White Mocha</td><td class="num">1.400</td><td class="num">1.700</td><td class="num">+21.4%</td></tr>
+        <tr><td>Cold Matcha Latte</td><td class="num">1.500</td><td class="num">1.900</td><td class="num">+26.7%</td></tr>
+        <tr><td>Iced Tea</td><td class="num">1.300</td><td class="num">1.400</td><td class="num">+7.7%</td></tr>
+        <tr><td>San Sebastian · plain</td><td class="num">1.900</td><td class="num">2.200</td><td class="num">+15.8%</td></tr>
+        <tr><td>San Sebastian · chocolate</td><td class="num">2.200</td><td class="num">2.700</td><td class="num">+22.7%</td></tr>
+        <tr><td>San Sebastian · pistachio</td><td class="num">2.400</td><td class="num">3.200</td><td class="num">+33.3%</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout">Talabat is best read as the delivery market: useful for positioning, but not a substitute for the price a customer sees at the counter.</div>
+
+    <div class="grid-2">
+      <div>
+        <h3>No single correction factor</h3>
+        <p>2 Oz premiums range from 7% to 33%. Rovana's older counter photograph produces mixed results, including exact matches and some lower Talabat prices. Product, date and channel all matter.</p>
+      </div>
+      <div>
+        <h3>Effect on Haven</h3>
+        <p>The drink proposals remain credible. San Sebastian at OMR 1.800 is still below 2 Oz's verified OMR 1.900 counter price. Brownie at OMR 2.500 requires even stronger product proof against 2 Oz's OMR 1.300 counter serving.</p>
+      </div>
+    </div>
+    <div class="page-footer"><span>Haven Cafe · Delivery versus counter check</span><span>4</span></div>
+  </section>
+
+  <section class="page">
+    <div class="eyebrow">Wider benchmarks</div>
+    <h1>Premium Oman and GCC pricing sits higher</h1>
+    <p class="standfirst">After the proposed changes, Haven remains below most premium Muscat, UAE and Qatar comparisons. Saudi examples support an accessible regional position around OMR 1.700-1.800 for an Iced Spanish Latte.</p>
+
+    <table>
+      <thead><tr><th>Market and establishment</th><th>Item</th><th class="num">Local price</th><th class="num">Approx. OMR</th></tr></thead>
+      <tbody>
+        <tr><td>Muscat · Department of Coffee</td><td>Iced Spanish Latte</td><td class="num">OMR 2.500</td><td class="num">2.500</td></tr>
+        <tr><td>Muscat · Costa</td><td>Iced Spanish Latte, small</td><td class="num">OMR 2.500</td><td class="num">2.500</td></tr>
+        <tr><td>Muscat · Momaz</td><td>San Sebastian Cheesecake</td><td class="num">OMR 4.570</td><td class="num">4.570</td></tr>
+        <tr><td>Muscat · Sector Seventeen</td><td>Iced Tea / Premium Brownie</td><td class="num">OMR 2.500 / 3.500</td><td class="num">2.500 / 3.500</td></tr>
+        <tr><td>Saudi Arabia · LaSani</td><td>Iced Spanish Latte</td><td class="num">SAR 17</td><td class="num">1.740</td></tr>
+        <tr><td>UAE · Roast Dubai</td><td>Iced Spanish Latte</td><td class="num">AED 22</td><td class="num">2.300</td></tr>
+        <tr><td>Abu Dhabi · Al Decha</td><td>Spanish Latte</td><td class="num">AED 22</td><td class="num">2.300</td></tr>
+        <tr><td>Qatar · Anna Cafe</td><td>Spanish Latte / Mojito / San Sebastian</td><td class="num">QAR 19 / 17 / 30</td><td class="num">2.010 / 1.800 / 3.170</td></tr>
+      </tbody>
+    </table>
+
+    <div class="grid-3">
+      <div class="metric"><span class="number">1.800</span><span class="caption">Haven proposed Iced Spanish</span></div>
+      <div class="metric"><span class="number">2.300</span><span class="caption">Representative UAE Spanish</span></div>
+      <div class="metric"><span class="number">2.500</span><span class="caption">Premium Muscat Spanish</span></div>
+    </div>
+
+    <div class="callout">Haven does not need to be the cheapest cafe to remain clearly good value.</div>
+
+    <div class="grid-2">
+      <div>
+        <h3>What comparisons can tell us</h3>
+        <ul class="plain-list">
+          <li>Whether a proposed price feels plausible in the market.</li>
+          <li>Where Haven sits between value and premium offers.</li>
+          <li>Which products need stronger presentation or proof.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>What they cannot tell us</h3>
+        <ul class="plain-list">
+          <li>Competitors' true recipes, costs or portions.</li>
+          <li>Whether a delivery price matches dine-in.</li>
+          <li>Haven's customer price elasticity during Khareef.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="page-footer"><span>Haven Cafe · Oman and GCC positioning</span><span>5</span></div>
+  </section>
+
+  <section class="page economics-page">
+    <div class="eyebrow">Dessert economics</div>
+    <h1>San Sebastian is profitable, but not at a high food margin</h1>
+    <p class="standfirst">The OMR 7 difference between cake cost and sales at the current price is gross contribution, not net profit. Labour, service materials, waste, occupancy, payment costs and tax still have to be covered.</p>
+
+    <div class="grid-2">
+      <div>
+        <h2>Current price · OMR 1.500</h2>
+        <div class="grid-3">
+          <div class="metric"><span class="number">15</span><span class="caption">Revenue per cake</span></div>
+          <div class="metric"><span class="number">7</span><span class="caption">Gross contribution</span></div>
+          <div class="metric"><span class="number">53.3%</span><span class="caption">Direct food cost</span></div>
+        </div>
+      </div>
+      <div>
+        <h2>Proposed price · OMR 1.800</h2>
+        <div class="grid-3">
+          <div class="metric"><span class="number">18</span><span class="caption">Revenue per cake</span></div>
+          <div class="metric"><span class="number">10</span><span class="caption">Gross contribution</span></div>
+          <div class="metric"><span class="number">44.4%</span><span class="caption">Direct food cost</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout">At OMR 1.800, Haven improves contribution by OMR 3 per whole cake while remaining at the bottom of the observed Salalah San Sebastian range.</div>
+
+    <div class="grid-2">
+      <div>
+        <h2>Why the low price may still be valuable</h2>
+        <ul class="plain-list">
+          <li>It encourages an easy add-on to coffee.</li>
+          <li>High turnover reduces spoilage.</li>
+          <li>It gives Haven a memorable value signature.</li>
+          <li>It may generate repeat visits and recommendations.</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Why high sales do not prove causation</h2>
+        <ul class="plain-list">
+          <li>San Sebastian is already a fashionable category.</li>
+          <li>Texture and coffee pairing are naturally attractive.</li>
+          <li>Staff recommendation and visibility matter.</li>
+          <li>Khareef increases traffic and holiday spending.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="note"><strong>Decision:</strong> move to OMR 1.800, then measure slices per 100 transactions, coffee attachment and total contribution. A small fall in units can still be a successful result.</div>
+
+    <h2 style="margin-top:6mm">Brownie requires stronger justification</h2>
+    <p>Local brownies with ice cream can appear around OMR 1.600-1.800. OMR 2.500 is defensible only as a generous premium serving. If the product is a simple slice, retain OMR 2.300.</p>
+    <div class="page-footer"><span>Haven Cafe · Dessert economics</span><span>6</span></div>
+  </section>
+
+  <section class="page">
+    <div class="eyebrow">Internal consistency</div>
+    <h1>The menu should read as an intentional price ladder</h1>
+    <p class="standfirst">Customers may not calculate costs, but they notice when adjacent products do not appear to follow the same logic.</p>
+
+    <div class="grid-2">
+      <div>
+        <h2>Proposed iced-coffee ladder</h2>
+        <div class="price-ladder">
+          <div class="ladder-row"><span>Americano on Ice</span><span class="amount">1.300</span></div>
+          <div class="ladder-row"><span>Iced Cappuccino</span><span class="amount">1.500</span></div>
+          <div class="ladder-row"><span>Iced Latte</span><span class="amount">1.600</span></div>
+          <div class="ladder-row"><span>Iced Caramel Latte</span><span class="amount">1.700</span></div>
+          <div class="ladder-row"><span>Iced Hazelnut Latte</span><span class="amount">1.700</span></div>
+          <div class="ladder-row"><span>Iced Spanish Latte</span><span class="amount">1.800</span></div>
+          <div class="ladder-row"><span>Iced Dark / White Mocha</span><span class="amount">1.800</span></div>
+          <div class="ladder-row"><span>Iced Matcha</span><span class="amount">2.000</span></div>
+          <div class="ladder-row signature"><span>Haven Passion Fruit Cold Brew</span><span class="amount">2.400</span></div>
+        </div>
+      </div>
+      <div>
+        <h2>Questions before publication</h2>
+        <div class="decision conditional">
+          <strong>Iced Cappuccino</strong>
+          It remains OMR 1.500 while Iced Latte becomes OMR 1.600. If cup size and ingredient cost are similar, price both at OMR 1.600.
+        </div>
+        <div class="decision conditional" style="margin-top:4mm">
+          <strong>Hot Hazelnut Latte</strong>
+          It remains OMR 1.500 while Caramel is OMR 1.700 and Iced Hazelnut becomes OMR 1.700. Consider OMR 1.700 standard / 1.900 large.
+        </div>
+        <div class="decision conditional" style="margin-top:4mm">
+          <strong>Affogato</strong>
+          At OMR 1.400 it becomes unusually inexpensive beside the revised desserts. Consider OMR 1.600-1.700 if premium vanilla ice cream and full espresso are used.
+        </div>
+      </div>
+    </div>
+
+    <h2>Naming consistency</h2>
+    <div class="grid-3">
+      <div class="note"><strong>Use:</strong><br>Iced Latte</div>
+      <div class="note"><strong>Use:</strong><br>Iced Tea</div>
+      <div class="note"><strong>Use:</strong><br>Iced Mocha</div>
+    </div>
+    <p class="small" style="margin-top:3mm">Use “Iced,” not “Ice,” in published English names. Align all flavoured Iced Teas at OMR 1.500; Karkade is already OMR 1.500.</p>
+
+    <h2 style="margin-top:5mm">Product proof</h2>
+    <p>At OMR 1.700, Mojitos should genuinely show fruit, mint and citrus rather than reading as soda and syrup. At OMR 2.500, the Brownie description must say what makes the serving premium. Pricing and language should prove one another.</p>
+    <div class="page-footer"><span>Haven Cafe · Menu coherence</span><span>7</span></div>
+  </section>
+
+  <section class="page">
+    <div class="eyebrow">Implementation and evidence</div>
+    <h1>Approve carefully, then measure</h1>
+    <div class="top-rule"></div>
+
+    <div class="grid-2">
+      <div>
+        <h2>Recommended decision</h2>
+        <ol class="number-list">
+          <li>Approve all proposed coffee and Iced Tea changes.</li>
+          <li>Approve Mojitos at OMR 1.700 subject to ingredient quality.</li>
+          <li>Approve San Sebastian and Chocolate Cheesecake at OMR 1.800.</li>
+          <li>Approve Brownie at OMR 2.500 only with visible product proof; otherwise retain OMR 2.300.</li>
+          <li>Resolve Iced Cappuccino, hot Hazelnut Latte and Affogato before publishing.</li>
+        </ol>
+      </div>
+      <div>
+        <h2>Four-week measurement</h2>
+        <ul class="plain-list">
+          <li>Units sold and revenue</li>
+          <li>Direct product cost and waste</li>
+          <li>Gross contribution</li>
+          <li>Percentage sold with coffee</li>
+          <li>Average ticket containing the item</li>
+          <li>Customer comments related to price</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout">For San Sebastian, compare slices per 100 transactions, coffees attached per 10 slices, and contribution per 100 transactions. Do not compare raw July volume with a quiet-season week.</div>
+
+    <h2>Principal sources</h2>
+    <ul class="source-list">
+      <li><strong>Rovana Cafe, Salalah</strong><br><a href="https://www.talabat.com/oman/restaurant/722029/rovana-cafe-janub-madinat-as-saad?aid=5607">talabat.com/oman/restaurant/722029</a></li>
+      <li><strong>Hills Cafe, Salalah</strong><br><a href="https://www.talabat.com/oman/restaurant/699748/hills-cafe-new-salalah?aid=8958">talabat.com/oman/restaurant/699748</a></li>
+      <li><strong>Black Drop, Salalah</strong><br><a href="https://www.talabat.com/oman/restaurant/798309/black-drop-cafe-sahalnoot-al-janubiyyah?aid=2698">talabat.com/oman/restaurant/798309</a></li>
+      <li><strong>2 Oz, Salalah</strong><br><a href="https://www.talabat.com/oman/restaurant/676833/2-oz-cafe-salalah-airport-new?aid=2698">talabat.com/oman/restaurant/676833</a></li>
+      <li><strong>2 Oz physical menu · July 2026</strong><br><a href="https://www.google.com/maps/search/?api=1&amp;query=2OZ+Cafe+Salalah">Google Maps menu photograph</a></li>
+      <li><strong>Rovana physical menu · August 2025</strong><br><a href="https://www.google.com/maps/search/?api=1&amp;query=Rovana+Cafe+Salalah">Google Maps menu photograph</a></li>
+      <li><strong>Mute Cafe, Salalah</strong><br><a href="https://www.talabat.com/oman/restaurant/671527/mute-cafe-ar-rubat?aid=2696">talabat.com/oman/restaurant/671527</a></li>
+      <li><strong>Department of Coffee, Oman</strong><br><a href="https://deptofcoffee.om/wp-content/uploads/2026/01/DOC-Oman-Menu-English-2025-dec.pdf">deptofcoffee.om/menu</a></li>
+      <li><strong>Roast Dubai</strong><br><a href="https://www.roastdubai.com/menu">roastdubai.com/menu</a></li>
+      <li><strong>LaSani Cafe, Saudi Arabia</strong><br><a href="https://lasanicafe.com/">lasanicafe.com</a></li>
+      <li><strong>Anna Cafe, Qatar</strong><br><a href="https://anna-cafe.com/">anna-cafe.com</a></li>
+      <li><strong>Oman Tax Authority</strong><br><a href="https://tms.taxoman.gov.om/portal/web/taxportal/vat-faqs">VAT FAQs</a></li>
+      <li><strong>Oman Consumer Protection regulation</strong><br><a href="https://qanoon.om/p/2017/pacp20170077/">Qanoon.om</a></li>
+      <li><strong>Visit Oman</strong><br><a href="https://booknow.visitoman.om/en/destination/dhr-93/dhofar">Dhofar seasons</a></li>
+    </ul>
+
+    <div class="note" style="margin-top:5mm"><strong>Regulatory presentation:</strong> confirm whether Haven's published prices include VAT and state this consistently. Oman requires a prominent price list, the applicable tax amount, and Arabic as one of the displayed languages.</div>
+    <div class="page-footer"><span>Haven Cafe · Pricing review</span><span>8</span></div>
+  </section>
+</body>
+</html>
