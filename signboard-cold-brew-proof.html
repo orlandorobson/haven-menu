@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Haven Cold Brew — 42 × 72 cm proof</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Noto+Naskh+Arabic:wght@600&display=swap"
+    rel="stylesheet"
+  >
+  <style>
+    :root {
+      --cream: #f6f0e5;
+      --navy: #061f33;
+      --silver: #d9dce0;
+      --red: #7f2028;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background: #d8d7d3;
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .artboard {
+      position: relative;
+      width: 420mm;
+      height: 720mm;
+      overflow: hidden;
+      background:
+        linear-gradient(
+          180deg,
+          rgba(2, 14, 24, 0.25) 0%,
+          rgba(2, 14, 24, 0.10) 23%,
+          transparent 39%
+        ),
+        url("assets/signboards/haven-cold-brew-photo-master-v3-upscaled-240ppi.png")
+        center / cover no-repeat;
+      box-shadow: 0 8px 36px rgba(0, 0, 0, 0.24);
+      color: var(--cream);
+      isolation: isolate;
+    }
+
+    .heading {
+      position: absolute;
+      z-index: 1;
+      top: 18mm;
+      left: 24mm;
+      right: 24mm;
+      display: grid;
+      justify-items: center;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: "Cormorant Garamond", Garamond, Baskerville, Georgia, serif;
+      font-weight: 600;
+      background: linear-gradient(
+        105deg,
+        #d6bc86 0%,
+        #f3e6c8 27%,
+        #e6d2a5 53%,
+        #f1e2bf 76%,
+        #d6bc86 100%
+      );
+      background-clip: text;
+      color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: none;
+    }
+
+    h1 span {
+      display: block;
+      white-space: nowrap;
+    }
+
+    .title-haven {
+      font-size: 42mm;
+      line-height: 0.82;
+      letter-spacing: 8mm;
+      transform: translateX(4mm);
+    }
+
+    .title-product {
+      margin-top: 5mm;
+      font-size: 44mm;
+      line-height: 0.84;
+      letter-spacing: 5.5mm;
+      transform: translateX(2.75mm);
+    }
+
+    .arabic-name {
+      margin: 19mm 0 0;
+      font-family: "Noto Naskh Arabic", "SF Arabic", "Geeza Pro", serif;
+      font-size: 28mm;
+      font-weight: 600;
+      line-height: 1;
+      direction: rtl;
+      background: linear-gradient(
+        100deg,
+        #d6bc86 0%,
+        #f3e6c8 33%,
+        #e5cf9e 62%,
+        #f0dfb8 100%
+      );
+      background-clip: text;
+      color: transparent;
+      filter: drop-shadow(0 0.9mm 1.8mm rgba(1, 10, 18, 0.22));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .flavour-panel {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: auto;
+      min-width: 0;
+      margin-top: 14mm;
+      padding: 3.7mm 11mm 3.4mm;
+      border: 0.4mm solid transparent;
+      border-radius: 999mm;
+      background:
+        linear-gradient(
+          rgba(246, 240, 229, 0.27),
+          rgba(236, 220, 188, 0.24)
+        ) padding-box,
+        linear-gradient(
+          110deg,
+          #a9824b 0%,
+          #f2dfb6 32%,
+          #c09b61 62%,
+          #ead2a0 82%,
+          #9e7743 100%
+        ) border-box;
+      box-shadow:
+        inset 0 0 0 0.45mm rgba(246, 240, 229, 0.035),
+        0 1.2mm 4mm rgba(1, 10, 18, 0.14);
+      color: var(--red);
+      backdrop-filter: blur(0.8mm);
+    }
+
+    .flavour-panel::before,
+    .flavour-panel::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 2.2mm;
+      height: 2.2mm;
+      border: 0.3mm solid rgba(225, 201, 150, 0.74);
+      background: rgba(6, 31, 51, 0.7);
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    .flavour-panel::before {
+      left: -1.45mm;
+    }
+
+    .flavour-panel::after {
+      right: -1.45mm;
+    }
+
+    .arabic-name + .flavour-panel {
+      margin-top: 12mm;
+      padding-right: 8mm;
+      padding-left: 8mm;
+    }
+
+    .flavour {
+      font-family: "Avenir Next", Avenir, "Helvetica Neue", sans-serif;
+      font-size: 11.2mm;
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: 4mm;
+      text-transform: uppercase;
+      transform: translateX(1.6mm);
+      background: linear-gradient(
+        103deg,
+        #702029 0%,
+        #a94b49 37%,
+        #7f2028 68%,
+        #b06055 84%,
+        #702029 100%
+      );
+      background-clip: text;
+      color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .flavour-ar {
+      font-family: "Noto Naskh Arabic", "SF Arabic", "Geeza Pro", serif;
+      font-size: 12.5mm;
+      font-weight: 700;
+      line-height: 1;
+      direction: rtl;
+      background: linear-gradient(
+        103deg,
+        #702029 0%,
+        #ad514d 39%,
+        #7f2028 70%,
+        #a74645 100%
+      );
+      background-clip: text;
+      color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .price {
+      position: absolute;
+      z-index: 1;
+      right: 25mm;
+      bottom: 23mm;
+      display: flex;
+      align-items: baseline;
+      gap: 3mm;
+      color: #e9d7ae;
+      font-family: "Avenir Next", Avenir, "Helvetica Neue", sans-serif;
+      font-variant-numeric: tabular-nums;
+      text-shadow: 0 1mm 3mm rgba(1, 10, 18, 0.55);
+    }
+
+    .price strong {
+      font-size: 13mm;
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: 0.3mm;
+    }
+
+    .price span {
+      color: #c9ad78;
+      font-size: 5mm;
+      font-weight: 700;
+      letter-spacing: 0.8mm;
+    }
+
+    @page {
+      size: 420mm 720mm;
+      margin: 0;
+    }
+
+    @media print {
+      html,
+      body {
+        width: 420mm;
+        height: 720mm;
+        background: transparent;
+      }
+
+      body {
+        display: block;
+        padding: 0;
+      }
+
+      .artboard {
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="artboard" aria-label="Haven Cold Brew pavement sign proof">
+    <section class="heading">
+      <h1>
+        <span class="title-haven">HAVEN</span>
+        <span class="title-product">COLD BREW</span>
+      </h1>
+      <div class="flavour-panel">
+        <div class="flavour">PASSION FRUIT</div>
+      </div>
+      <p class="arabic-name" lang="ar">هيڤن كولد برو</p>
+      <div class="flavour-panel">
+        <div class="flavour-ar" lang="ar">بـــاشـــن فـــروت</div>
+      </div>
+    </section>
+
+    <div class="price" aria-label="Price: 2.4 Omani rials">
+      <strong>2.4</strong>
+      <span>OMR</span>
+    </div>
+  </main>
+</body>
+</html>

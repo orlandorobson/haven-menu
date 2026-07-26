@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="420mm"
+     height="720mm"
+     viewBox="0 0 420 720">
+  <title>Haven Cold Brew - Passion Fruit pavement sign</title>
+  <desc>Full-size 42 by 72 centimetre Haven signboard artwork.</desc>
+  
+<defs>
+  <linearGradient id="topShade" x1="0" y1="0" x2="0" y2="281" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#020e18" stop-opacity=".25"/>
+    <stop offset=".59" stop-color="#020e18" stop-opacity=".10"/>
+    <stop offset="1" stop-color="#020e18" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="champagne" x1="55" y1="0" x2="365" y2="0" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#d6bc86"/>
+    <stop offset=".27" stop-color="#f3e6c8"/>
+    <stop offset=".53" stop-color="#e6d2a5"/>
+    <stop offset=".76" stop-color="#f1e2bf"/>
+    <stop offset="1" stop-color="#d6bc86"/>
+  </linearGradient>
+  <linearGradient id="champagneArabic" x1="138" y1="0" x2="282" y2="0" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#d6bc86"/>
+    <stop offset=".33" stop-color="#f3e6c8"/>
+    <stop offset=".62" stop-color="#e5cf9e"/>
+    <stop offset="1" stop-color="#f0dfb8"/>
+  </linearGradient>
+  <linearGradient id="panelFill" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#f6f0e5" stop-opacity=".27"/>
+    <stop offset="1" stop-color="#ecdcbc" stop-opacity=".24"/>
+  </linearGradient>
+  <linearGradient id="metalEdge" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#a9824b"/>
+    <stop offset=".32" stop-color="#f2dfb6"/>
+    <stop offset=".62" stop-color="#c09b61"/>
+    <stop offset=".82" stop-color="#ead2a0"/>
+    <stop offset="1" stop-color="#9e7743"/>
+  </linearGradient>
+  <linearGradient id="oxblood" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#702029"/>
+    <stop offset=".37" stop-color="#a94b49"/>
+    <stop offset=".68" stop-color="#7f2028"/>
+    <stop offset=".84" stop-color="#b06055"/>
+    <stop offset="1" stop-color="#702029"/>
+  </linearGradient>
+  <linearGradient id="oxbloodArabic" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#702029"/>
+    <stop offset=".39" stop-color="#ad514d"/>
+    <stop offset=".70" stop-color="#7f2028"/>
+    <stop offset="1" stop-color="#a74645"/>
+  </linearGradient>
+</defs>
+
+  <image id="photograph" href="haven-cold-brew-photo-master-v3-upscaled-240ppi.png" x="0" y="0" width="420" height="720" preserveAspectRatio="none"/>
+  <rect id="top-tone-control" x="0" y="0" width="420" height="281" fill="url(#topShade)"/>
+  
+<g id="flavour-panels">
+  <rect x="131.68" y="108.39" width="156.64" height="18.82" rx="9.41" fill="url(#metalEdge)"/>
+  <rect x="132.08" y="108.79" width="155.84" height="18.02" rx="9.01" fill="url(#panelFill)"/>
+  <rect x="130.7" y="116.47" width="2.2" height="2.2" transform="rotate(45 131.8 117.57)" fill="#061f33" fill-opacity=".7" stroke="#e1c996" stroke-opacity=".74" stroke-width=".3"/>
+  <rect x="287.1" y="116.47" width="2.2" height="2.2" transform="rotate(45 288.2 117.57)" fill="#061f33" fill-opacity=".7" stroke="#e1c996" stroke-opacity=".74" stroke-width=".3"/>
+  <rect x="163.94" y="186.21" width="92.12" height="20.13" rx="10.06" fill="url(#metalEdge)"/>
+  <rect x="164.34" y="186.61" width="91.32" height="19.33" rx="9.66" fill="url(#panelFill)"/>
+  <rect x="162.96" y="195.18" width="2.2" height="2.2" transform="rotate(45 164.06 196.28)" fill="#061f33" fill-opacity=".7" stroke="#e1c996" stroke-opacity=".74" stroke-width=".3"/>
+  <rect x="254.94" y="195.18" width="2.2" height="2.2" transform="rotate(45 256.04 196.28)" fill="#061f33" fill-opacity=".7" stroke="#e1c996" stroke-opacity=".74" stroke-width=".3"/>
+</g>
+
+  
+<style>
+  @font-face {
+    font-family: "Cormorant Garamond Local";
+    src: url("fonts/CormorantGaramond-wght.ttf") format("truetype");
+    font-weight: 300 700;
+  }
+  @font-face {
+    font-family: "Noto Naskh Arabic Local";
+    src: url("fonts/NotoNaskhArabic-wght.ttf") format("truetype");
+    font-weight: 400 700;
+  }
+</style>
+<g id="editable-typography" text-anchor="middle">
+  <text x="214" y="50.1" font-family="Cormorant Garamond Local" font-size="42" font-weight="600" letter-spacing="8" fill="url(#champagne)">HAVEN</text>
+  <text x="212.75" y="92.8" font-family="Cormorant Garamond Local" font-size="44" font-weight="600" letter-spacing="5.5" fill="url(#champagne)">COLD BREW</text>
+  <text x="211.6" y="122.55" font-family="Avenir Next" font-size="11.2" font-weight="600" letter-spacing="4" fill="url(#oxblood)">PASSION FRUIT</text>
+  <text x="210" y="170.7" direction="rtl" font-family="Noto Naskh Arabic Local" font-size="28" font-weight="600" fill="url(#champagneArabic)">هيڤن كولد برو</text>
+  <text x="210" y="200.25" direction="rtl" font-family="Noto Naskh Arabic Local" font-size="12.5" font-weight="700" fill="url(#oxbloodArabic)">بـــاشـــن فـــروت</text>
+  <text x="357.12" y="696.15" text-anchor="start" font-family="Avenir Next" font-size="13" font-weight="600" letter-spacing=".3" fill="#e9d7ae">2.4</text>
+  <text x="380.26" y="696.15" text-anchor="start" font-family="Avenir Next" font-size="5" font-weight="700" letter-spacing=".8" fill="#c9ad78">OMR</text>
+</g>
+
+</svg>

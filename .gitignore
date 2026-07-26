@@ -1,2 +1,22 @@
 tmp/
 .DS_Store
+
+# Generated document QA renders
+output/strategy/*-render/
+output/strategy/rendered/
+output/strategy/rendered-v2/
+output/strategy/qa-final/
+output/strategy/**/page-*.png
+
+# Generated signboard review proofs
+assets/signboards/haven-cold-brew-distance-check-v*.png
+assets/signboards/haven-cold-brew-layout-proof-v*.png
+
+# Large local printer deliverables
+output/print/HAVEN_COLD_BREW_PRINTER_PACK/
+output/print/HAVEN_COLD_BREW_PRINTER_PACK_*.zip
+assets/signboards/*.tif
+output/print/**/*.tif
+
+# Local font copies pending redistribution review
+assets/signboards/fonts/
