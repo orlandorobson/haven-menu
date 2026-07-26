@@ -32,7 +32,7 @@ window.HAVEN_MENU = {
           arabicName: "سبانش لاتيه مثلج",
           description: "Espresso, cold milk and a measured sweetness over ice.",
           arabicDescription: "إسبريسو وحليب بارد بحلاوة متوازنة فوق الثلج.",
-          price: 1.7,
+          price: 1.8,
           tags: ["Iced"],
           label: "Most Ordered",
           arabicLabel: "الأكثر طلبا",
@@ -43,8 +43,8 @@ window.HAVEN_MENU = {
           id: "haven-cold-brew",
           name: "Haven Passion Fruit Cold Brew",
           arabicName: "كولد برو هيفن بالباشن فروت",
-          description: "Our founding barista's recipe: slow-steeped coffee with a bright passion fruit finish.",
-          arabicDescription: "وصفة ابتكرها باريستا هيفن المؤسس: قهوة منقوعة على البارد بنهاية منعشة من الباشن فروت.",
+          description: "Haven's original recipe, created by our founding barista: a generous bottle of slow-steeped coffee with a bright passion fruit finish.",
+          arabicDescription: "وصفة هيفن الأصلية، ابتكرها باريستا هيفن المؤسس: زجاجة كبيرة من القهوة المنقوعة ببطء على البارد بنهاية منعشة من الباشن فروت.",
           price: 2.4,
           tags: ["Iced"],
           label: "Haven Signature",
@@ -76,7 +76,7 @@ window.HAVEN_MENU = {
           arabicName: "لاتيه مثلج",
           description: "Espresso and cold milk over ice.",
           arabicDescription: "إسبريسو وحليب بارد فوق الثلج.",
-          price: 1.5,
+          price: 1.6,
           tags: ["Iced"]
         },
         {
@@ -114,7 +114,7 @@ window.HAVEN_MENU = {
           arabicName: "هزلنت لاتيه مثلج",
           description: "Cold milk and espresso with hazelnut over ice.",
           arabicDescription: "حليب بارد وإسبريسو وبندق فوق الثلج.",
-          price: 1.5,
+          price: 1.7,
           tags: ["Iced"]
         },
         {
@@ -275,7 +275,7 @@ window.HAVEN_MENU = {
           arabicName: "دارك موكا مثلج",
           description: "Dark chocolate, cold milk and espresso over ice.",
           arabicDescription: "شوكولاتة داكنة وحليب بارد وإسبريسو فوق الثلج.",
-          price: 1.7,
+          price: 1.8,
           tags: ["Iced"]
         },
         {
@@ -294,7 +294,7 @@ window.HAVEN_MENU = {
           arabicName: "وايت موكا مثلج",
           description: "White chocolate, cold milk and espresso over ice.",
           arabicDescription: "شوكولاتة بيضاء وحليب بارد وإسبريسو فوق الثلج.",
-          price: 1.7,
+          price: 1.8,
           tags: ["Iced"]
         },
         {
@@ -379,7 +379,7 @@ window.HAVEN_MENU = {
           arabicName: "آيس تي باشن فروت",
           description: "Cold tea with the tart fragrance of passion fruit.",
           arabicDescription: "شاي بارد برائحة الباشن فروت وحموضته الخفيفة.",
-          price: 1.3,
+          price: 1.5,
           tags: ["Iced"]
         },
         {
@@ -388,7 +388,7 @@ window.HAVEN_MENU = {
           arabicName: "آيس تي مانجو",
           description: "Cold tea with ripe mango sweetness.",
           arabicDescription: "شاي بارد بحلاوة المانجو الناضجة.",
-          price: 1.3,
+          price: 1.5,
           tags: ["Iced"]
         },
         {
@@ -397,7 +397,7 @@ window.HAVEN_MENU = {
           arabicName: "آيس تي خوخ",
           description: "Cold tea with a soft peach finish.",
           arabicDescription: "شاي بارد بنهاية ناعمة من الخوخ.",
-          price: 1.3,
+          price: 1.5,
           tags: ["Iced"]
         }
       ]
@@ -461,7 +461,7 @@ window.HAVEN_MENU = {
           arabicName: "موهيتو فراولة",
           description: "Strawberry, mint and citrus over ice.",
           arabicDescription: "فراولة ونعناع وحمضيات فوق الثلج.",
-          price: 1.4,
+          price: 1.7,
           tags: ["Iced"]
         },
         {
@@ -470,7 +470,7 @@ window.HAVEN_MENU = {
           arabicName: "موهيتو بلوبيري",
           description: "Blueberry, mint and citrus over ice.",
           arabicDescription: "بلوبيري ونعناع وحمضيات فوق الثلج.",
-          price: 1.4,
+          price: 1.7,
           tags: ["Iced"],
           image: "assets/img/mojito-blueberry.png"
         },
@@ -480,7 +480,7 @@ window.HAVEN_MENU = {
           arabicName: "موهيتو باشن فروت",
           description: "Passion fruit, mint and citrus over ice.",
           arabicDescription: "باشن فروت ونعناع وحمضيات فوق الثلج.",
-          price: 1.4,
+          price: 1.7,
           tags: ["Iced"]
         },
         {
@@ -489,7 +489,7 @@ window.HAVEN_MENU = {
           arabicName: "موهيتو خوخ",
           description: "Peach, mint and citrus over ice.",
           arabicDescription: "خوخ ونعناع وحمضيات فوق الثلج.",
-          price: 1.4,
+          price: 1.7,
           tags: ["Iced"]
         }
       ]
@@ -532,8 +532,8 @@ window.HAVEN_MENU = {
           id: "brownie",
           name: "Brownie",
           arabicName: "براوني",
-          description: "A dense chocolate crumb with a soft centre.",
-          arabicDescription: "قوام شوكولاتة كثيف بقلب طري.",
+          description: "A generous, deep brownie made by a specialist chef with high-quality chocolate, soft at the centre and served with premium vanilla ice cream.",
+          arabicDescription: "قطعة براوني سميكة وسخية، يصنعها شيف متخصص من شوكولاتة عالية الجودة، بقلب طري وتقدم مع آيس كريم فانيلا فاخر.",
           price: 2.3,
           tags: ["Dessert"],
           image: "assets/img/brownie.png",
@@ -545,7 +545,7 @@ window.HAVEN_MENU = {
           arabicName: "تشيز كيك سان سيباستيان",
           description: "Basque-style cheesecake with a browned top and soft centre.",
           arabicDescription: "تشيز كيك باسكي بسطح محمر وقلب طري.",
-          price: 1.5,
+          price: 1.8,
           tags: ["Dessert"]
         },
         {
@@ -554,7 +554,7 @@ window.HAVEN_MENU = {
           arabicName: "تشيز كيك شوكولاتة",
           description: "Chocolate cheesecake with a dense, creamy centre.",
           arabicDescription: "تشيز كيك بالشوكولاتة وقلب كثيف وكريمي.",
-          price: 1.5,
+          price: 1.8,
           tags: ["Dessert"]
         }
       ]
