@@ -319,6 +319,15 @@ window.HAVEN_MENU = {
           featured: true
         },
         {
+          id: "strawberry-matcha",
+          name: "Strawberry Matcha",
+          arabicName: "ماتشا بالفراولة",
+          description: "Matcha and cold milk over strawberry; creamy, earthy and softly fruity.",
+          arabicDescription: "ماتشا وحليب بارد مع الفراولة؛ طعم كريمي ومتوازن بلمسة فاكهية.",
+          price: 2,
+          tags: ["Iced"]
+        },
+        {
           id: "creamy-espresso",
           name: "Creamy Espresso",
           arabicName: "إسبريسو كريمي",
@@ -554,8 +563,8 @@ window.HAVEN_MENU = {
       id: "desserts",
       name: "Sweets & Cakes",
       arabicName: "الحلويات والكيك",
-      description: "Four desserts chosen to sit naturally beside coffee.",
-      arabicDescription: "أربع حلويات مختارة لترافق القهوة.",
+      description: "Five desserts chosen to sit naturally beside coffee.",
+      arabicDescription: "خمس حلويات مختارة لترافق القهوة.",
       items: [
         {
           id: "truffle-mango",
@@ -576,6 +585,15 @@ window.HAVEN_MENU = {
           tags: ["Dessert"],
           image: "assets/img/brownie.png",
           featured: true
+        },
+        {
+          id: "cookie-cake",
+          name: "Cookie Cake",
+          arabicName: "كيك الكوكيز",
+          description: "A thick cookie-style cake with a soft centre and crisp baked edge.",
+          arabicDescription: "كيك كوكيز سميك بقلب طري وحواف مخبوزة مقرمشة.",
+          price: 1.5,
+          tags: ["Dessert"]
         },
         {
           id: "san-sebastian",
