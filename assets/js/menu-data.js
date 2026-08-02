@@ -2,7 +2,11 @@ window.HAVEN_MENU = {
   venue: {
     name: "Haven Cafe",
     arabicName: "هيفن",
-    location: "Osara, Salalah"
+    location: "Osara, Salalah",
+    coffeeStatement: "Every Haven coffee is made with premium beans, roasted locally and selected with care.",
+    arabicCoffeeStatement: "تُحضّر جميع قهوة هيفن من حبوب فاخرة محمصة محليا ومختارة بعناية.",
+    dessertStatement: "Our cakes and sweets are prepared locally for Haven by professional pastry chefs.",
+    arabicDessertStatement: "تُحضّر كيكات وحلويات هيفن محليا على أيدي طهاة حلويات محترفين."
   },
   categories: [
     {
@@ -43,12 +47,13 @@ window.HAVEN_MENU = {
           id: "haven-cold-brew",
           name: "Haven Passion Fruit Cold Brew",
           arabicName: "كولد برو هيفن بالباشن فروت",
-          description: "Haven's original recipe, created by our founding barista: a generous bottle of slow-steeped coffee with a bright passion fruit finish.",
-          arabicDescription: "وصفة هيفن الأصلية، ابتكرها باريستا هيفن المؤسس: زجاجة كبيرة من القهوة المنقوعة ببطء على البارد بنهاية منعشة من الباشن فروت.",
-          price: 2.4,
+          description: "Haven's original passion fruit recipe, created by our founding barista: a generous bottle of slow-steeped cold brew that pours two cups.",
+          arabicDescription: "وصفة هيفن الأصلية بالباشن فروت، ابتكرها باريستا هيفن المؤسس: زجاجة سخية من الكولد برو المنقوع ببطء تكفي لكوبين.",
+          price: 2.5,
           tags: ["Iced"],
-          label: "Haven Signature",
-          arabicLabel: "ابتكار هيفن",
+          label: "Haven Signature · Serves Two",
+          arabicLabel: "ابتكار هيفن · يكفي كوبين",
+          printDescription: true,
           featured: true
         }
       ]
@@ -412,6 +417,24 @@ window.HAVEN_MENU = {
       ]
     },
     {
+      id: "juices",
+      name: "Juice",
+      arabicName: "العصائر",
+      description: "Fruit juice served cold.",
+      arabicDescription: "عصير فواكه يقدم باردا.",
+      items: [
+        {
+          id: "orange-juice",
+          name: "Orange Juice",
+          arabicName: "عصير برتقال",
+          description: "Orange juice served chilled.",
+          arabicDescription: "عصير برتقال يقدم باردا.",
+          price: 1.8,
+          tags: ["Iced"]
+        }
+      ]
+    },
+    {
       id: "smoothies-and-shakes",
       name: "Smoothies & Shakes",
       arabicName: "سموذي وميلك شيك",
@@ -522,50 +545,52 @@ window.HAVEN_MENU = {
       ]
     },
     {
-      id: "sandwiches",
-      name: "Sandwiches",
-      arabicName: "السندويشات",
-      description: "Generous sandwiches prepared for Haven by a specialist kitchen and served warm.",
-      arabicDescription: "سندويشات سخية تحضر لهيفن في مطبخ متخصص وتقدم دافئة.",
-      items: [
-        {
-          id: "halloumi-sandwich",
-          name: "Halloumi & Tomato",
-          arabicName: "ساندويتش حلوم وطماطم",
-          description: "Warm halloumi with tomato and crisp lettuce in a long brown roll.",
-          arabicDescription: "حلوم دافئ مع الطماطم والخس المقرمش في خبز أسمر طويل.",
-          price: 1.9,
-          tags: ["Sandwich"]
-        },
-        {
-          id: "chicken-sandwich",
-          name: "Seasoned Chicken",
-          arabicName: "ساندويتش دجاج متبل",
-          description: "Warm seasoned chicken with crisp shredded cabbage in brown bread.",
-          arabicDescription: "دجاج متبل ودافئ مع ملفوف مقرمش في خبز أسمر.",
-          price: 1.9,
-          tags: ["Sandwich"]
-        },
-        {
-          id: "turkey-sandwich",
-          name: "Turkey & Cheese",
-          arabicName: "ساندويتش ديك رومي وجبن",
-          description: "Warm turkey and cheese with tomato and lettuce in a long brown roll.",
-          arabicDescription: "شرائح ديك رومي دافئة مع الجبن والطماطم والخس في خبز أسمر طويل.",
-          price: 1.9,
-          tags: ["Sandwich"],
-          image: "assets/img/haven-turkey-sandwich-real.jpg",
-          featured: true
-        }
-      ]
-    },
-    {
       id: "desserts",
       name: "Sweets & Cakes",
       arabicName: "الحلويات والكيك",
-      description: "Five desserts chosen to sit naturally beside coffee.",
-      arabicDescription: "خمس حلويات مختارة لترافق القهوة.",
+      description: "Prepared locally for Haven by professional pastry chefs.",
+      arabicDescription: "تحضّر محليا لهيفن على أيدي طهاة حلويات محترفين.",
       items: [
+        {
+          id: "san-sebastian",
+          name: "San Sebastian Cheesecake",
+          arabicName: "تشيز كيك سان سيباستيان",
+          description: "Basque-style cheesecake with a caramelised top and soft centre, served with Haven's own homemade chocolate sauce.",
+          arabicDescription: "تشيز كيك باسكي بسطح مكرمل وقلب طري، يقدم مع صلصة الشوكولاتة المنزلية بوصفة هيفن الخاصة.",
+          price: 1.8,
+          tags: ["Dessert"],
+          label: "Guest Favourite",
+          arabicLabel: "من مفضلات ضيوفنا",
+          printDescription: true,
+          featured: true
+        },
+        {
+          id: "brownie",
+          name: "Brownie",
+          arabicName: "براوني",
+          description: "A generous, deep brownie made by a specialist chef with high-quality chocolate, soft at the centre and served with premium vanilla ice cream.",
+          arabicDescription: "قطعة براوني سميكة وسخية، يصنعها شيف متخصص من شوكولاتة عالية الجودة، بقلب طري وتقدم مع آيس كريم فانيلا فاخر.",
+          price: 2.3,
+          tags: ["Dessert"],
+          label: "Guest Favourite",
+          arabicLabel: "من مفضلات ضيوفنا",
+          printDescription: true,
+          image: "assets/img/brownie.png",
+          featured: true
+        },
+        {
+          id: "london-cake",
+          name: "London Cake & Haven Chocolate Sauce",
+          arabicName: "كيكة لندن مع صلصة شوكولاتة هيفن",
+          description: "London Cake served with homemade chocolate sauce from Haven's own private recipe.",
+          arabicDescription: "كيكة لندن تقدم مع صلصة شوكولاتة منزلية من وصفة هيفن الخاصة.",
+          price: 2.5,
+          tags: ["Dessert"],
+          label: "New at Haven",
+          arabicLabel: "جديد في هيفن",
+          printDescription: true,
+          featured: true
+        },
         {
           id: "truffle-mango",
           name: "Truffle Mango",
@@ -576,32 +601,12 @@ window.HAVEN_MENU = {
           tags: ["Dessert"]
         },
         {
-          id: "brownie",
-          name: "Brownie",
-          arabicName: "براوني",
-          description: "A generous, deep brownie made by a specialist chef with high-quality chocolate, soft at the centre and served with premium vanilla ice cream.",
-          arabicDescription: "قطعة براوني سميكة وسخية، يصنعها شيف متخصص من شوكولاتة عالية الجودة، بقلب طري وتقدم مع آيس كريم فانيلا فاخر.",
-          price: 2.3,
-          tags: ["Dessert"],
-          image: "assets/img/brownie.png",
-          featured: true
-        },
-        {
           id: "cookie-cake",
           name: "Cookie Cake",
           arabicName: "كيك الكوكيز",
           description: "A thick cookie-style cake with a soft centre and crisp baked edge.",
           arabicDescription: "كيك كوكيز سميك بقلب طري وحواف مخبوزة مقرمشة.",
           price: 1.5,
-          tags: ["Dessert"]
-        },
-        {
-          id: "san-sebastian",
-          name: "San Sebastian Cheesecake",
-          arabicName: "تشيز كيك سان سيباستيان",
-          description: "Basque-style cheesecake with a browned top and soft centre.",
-          arabicDescription: "تشيز كيك باسكي بسطح محمر وقلب طري.",
-          price: 1.8,
           tags: ["Dessert"]
         },
         {

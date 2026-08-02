@@ -15,6 +15,8 @@
       index: "Chapter 01",
       name: "Hot Drinks",
       arabicName: "المشروبات الساخنة",
+      note: data.venue.coffeeStatement,
+      arabicNote: data.venue.arabicCoffeeStatement,
       image: "assets/img/haven-spanish-latte-web.jpg",
       imagePosition: "center 58%",
       matches: (item) => item.tags.includes("Hot")
@@ -24,6 +26,8 @@
       index: "Chapter 02",
       name: "Iced Drinks",
       arabicName: "المشروبات الباردة",
+      note: data.venue.coffeeStatement,
+      arabicNote: data.venue.arabicCoffeeStatement,
       image: "assets/img/haven-matcha-real.jpg",
       imagePosition: "center 58%",
       matches: (item) => item.tags.includes("Iced") || item.tags.includes("Cold"),
@@ -34,19 +38,12 @@
       }
     },
     {
-      id: "sandwiches",
-      index: "Chapter 03",
-      name: "Sandwiches",
-      arabicName: "السندويشات",
-      image: "assets/img/haven-turkey-sandwich-real.jpg",
-      imagePosition: "center 43%",
-      matches: (item) => item.tags.includes("Sandwich")
-    },
-    {
       id: "sweets",
-      index: "Chapter 04",
+      index: "Chapter 03",
       name: "Sweets & Desserts",
       arabicName: "الحلويات",
+      note: data.venue.dessertStatement,
+      arabicNote: data.venue.arabicDessertStatement,
       image: "assets/img/haven-brownie-web.jpg",
       imagePosition: "center 52%",
       matches: (item) => item.tags.includes("Dessert")
@@ -54,20 +51,20 @@
   ];
 
   const formatPrice = (price) => price.toFixed(3);
+  const currencySign = '<span class="omr-sign" aria-hidden="true"></span>';
 
   function renderPrice(item) {
     if (!item.largePrice) {
       return `
         <strong class="item-price" aria-label="${formatPrice(item.price)} OMR">
-          <span>${formatPrice(item.price)}<small>OMR</small></span>
+          <span class="price-number">${currencySign}${formatPrice(item.price)}</span>
         </strong>`;
     }
 
     return `
       <strong class="item-price has-sizes" aria-label="Standard ${formatPrice(item.price)} OMR, large ${formatPrice(item.largePrice)} OMR">
-        <span><small>Standard</small>${formatPrice(item.price)}</span>
-        <span><small>Large</small>${formatPrice(item.largePrice)}</span>
-        <i>OMR</i>
+        <span><small>Standard</small><b class="price-number">${currencySign}${formatPrice(item.price)}</b></span>
+        <span><small>Large</small><b class="price-number">${currencySign}${formatPrice(item.largePrice)}</b></span>
       </strong>`;
   }
 
@@ -124,7 +121,13 @@
       )
       .join("");
 
-    menuEl.innerHTML = groups
+    const chapterNote = `
+      <aside class="chapter-note">
+        <p>${chapter.note}</p>
+        <p lang="ar" dir="rtl">${chapter.arabicNote}</p>
+      </aside>`;
+
+    menuEl.innerHTML = chapterNote + groups
       .map(
         ({ category, items }) => `
           <section class="menu-section" id="${chapter.id}-${category.id}">
@@ -132,6 +135,10 @@
               <h3>${category.name}</h3>
               <p lang="ar" dir="rtl">${category.arabicName}</p>
             </header>
+            <div class="section-intro">
+              <p>${category.description}</p>
+              <p lang="ar" dir="rtl">${category.arabicDescription}</p>
+            </div>
             ${items
               .map((item) => `${renderSpotlight(chapter, item)}${renderItem(item)}`)
               .join("")}

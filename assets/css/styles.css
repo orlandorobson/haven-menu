@@ -231,11 +231,6 @@ a {
   background-position: center 58%;
 }
 
-.chapter-door-sandwiches {
-  background-image: url("../img/haven-turkey-sandwich-real.jpg");
-  background-position: center 43%;
-}
-
 .chapter-door-sweets {
   background-image: url("../img/haven-brownie-web.jpg");
   background-position: center 53%;
@@ -375,6 +370,26 @@ a {
   padding: 10px 20px 58px;
 }
 
+.chapter-note {
+  display: grid;
+  gap: 5px;
+  padding: 22px 0 18px;
+  border-bottom: 1px solid var(--line);
+  color: #3f505c;
+}
+
+.chapter-note p {
+  max-width: 58ch;
+  margin: 0;
+  font: 600 1rem/1.45 var(--serif);
+}
+
+.chapter-note [lang="ar"] {
+  color: var(--red);
+  font: 600 0.94rem/1.5 var(--arabic);
+  text-align: right;
+}
+
 .menu-section {
   scroll-margin-top: 118px;
   padding-top: 36px;
@@ -409,11 +424,28 @@ a {
   text-align: right;
 }
 
+.section-intro {
+  display: grid;
+  gap: 3px;
+  margin: 0 0 2px;
+  color: #5b6871;
+  font-size: 0.76rem;
+}
+
+.section-intro p {
+  margin: 0;
+}
+
+.section-intro [lang="ar"] {
+  font: 500 0.83rem/1.45 var(--arabic);
+  text-align: right;
+}
+
 .menu-item {
   position: relative;
   display: block;
   min-width: 0;
-  padding: 17px 112px 17px 0;
+  padding: 17px 124px 17px 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -470,7 +502,7 @@ a {
   position: absolute;
   top: 19px;
   right: 0;
-  width: 98px;
+  width: 114px;
   display: flex;
   flex-direction: column;
   align-items: end;
@@ -483,6 +515,26 @@ a {
 .item-price > span {
   display: grid;
   justify-items: end;
+}
+
+.item-price > .price-number,
+.price-number {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  color: inherit;
+  font: inherit;
+}
+
+.omr-sign {
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 1.08em;
+  height: 0.72em;
+  margin: 0;
+  background: currentColor;
+  -webkit-mask: url("../img/omani-rial-symbol-medium.png") center / contain no-repeat;
+  mask: url("../img/omani-rial-symbol-medium.png") center / contain no-repeat;
 }
 
 .item-price > span small {
@@ -505,13 +557,6 @@ a {
   font-size: 0.48rem;
   letter-spacing: 0;
   text-transform: uppercase;
-}
-
-.item-price i {
-  color: var(--muted);
-  font: 800 0.5rem/1 var(--sans);
-  font-style: normal;
-  letter-spacing: 0.08em;
 }
 
 .spotlight {

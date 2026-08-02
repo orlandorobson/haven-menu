@@ -98,9 +98,30 @@ h3 {
   display: grid;
   grid-template-columns: 1.3fr 1fr 1fr;
   gap: 3mm;
-  margin: 5mm 0;
-  height: 48mm;
+  margin: 4mm 0 3mm;
+  height: 42mm;
   overflow: hidden;
+}
+
+.print-note {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6mm;
+  padding: 2mm 0;
+  border-top: 0.5pt solid var(--line);
+  border-bottom: 0.5pt solid var(--line);
+  color: #42535f;
+}
+
+.print-note p {
+  margin: 0;
+  font: 600 7.2pt/1.25 var(--serif);
+}
+
+.print-note [lang="ar"] {
+  color: var(--red);
+  font: 600 7.4pt/1.3 var(--arabic);
+  text-align: right;
 }
 
 .photo-strip img {
@@ -124,11 +145,16 @@ h3 {
 }
 
 .print-menu-continuation .print-section {
-  margin-bottom: 2.5mm;
+  margin-bottom: 1.5mm;
 }
 
 .print-menu-continuation article {
-  padding-block: 0.75mm;
+  padding-block: 0.45mm;
+}
+
+.print-menu-continuation .print-section header {
+  margin-bottom: 1mm;
+  padding-bottom: 0.8mm;
 }
 
 .print-column {
@@ -163,7 +189,7 @@ h3 {
 
 article {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 28mm;
+  grid-template-columns: minmax(0, 1fr) 31mm;
   gap: 3mm;
   align-items: baseline;
   padding: 1.55mm 0;
@@ -193,6 +219,48 @@ strong {
   text-align: right;
 }
 
+.print-price,
+.print-size-prices b {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  color: inherit;
+  font: inherit;
+}
+
+.omr-sign {
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 1.08em;
+  height: 0.72em;
+  margin: 0;
+  background: currentColor;
+  -webkit-mask: url("../img/omani-rial-symbol-medium.png") center / contain no-repeat;
+  mask: url("../img/omani-rial-symbol-medium.png") center / contain no-repeat;
+}
+
+.print-label {
+  display: block;
+  margin-bottom: 0.4mm;
+  color: var(--red);
+  font: 800 5.2pt/1 var(--sans);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.print-description {
+  display: grid;
+  gap: 0.25mm;
+  margin-top: 0.8mm;
+  color: #53616a;
+  font: 500 6.1pt/1.22 var(--sans);
+}
+
+.print-description [lang="ar"] {
+  font: 500 6.5pt/1.22 var(--arabic);
+  text-align: right;
+}
+
 .print-size-prices {
   display: grid;
   gap: 0.7mm;
@@ -203,6 +271,10 @@ strong {
   grid-template-columns: 1fr auto;
   gap: 1.5mm;
   align-items: baseline;
+}
+
+.print-size-prices b {
+  justify-self: end;
 }
 
 .print-size-prices small {
