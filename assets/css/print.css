@@ -224,8 +224,8 @@ strong {
   display: inline-flex;
   align-items: baseline;
   justify-content: flex-end;
-  color: inherit;
-  font: inherit;
+  color: var(--red);
+  font: 800 10.4pt/1 var(--sans);
 }
 
 .omr-sign {
