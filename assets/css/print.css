@@ -95,11 +95,12 @@ h3 {
 }
 
 .photo-strip {
+  flex: 0 0 34mm;
   display: grid;
   grid-template-columns: 1.3fr 1fr 1fr;
   gap: 3mm;
-  margin: 4mm 0 3mm;
-  height: 42mm;
+  margin: 3mm 0 2.5mm;
+  height: 34mm;
   overflow: hidden;
 }
 
@@ -131,6 +132,42 @@ h3 {
   border: 0.5pt solid var(--line);
 }
 
+.photo-strip img:nth-child(1) {
+  object-position: center 66%;
+}
+
+.photo-strip img:nth-child(2) {
+  object-position: center 58%;
+}
+
+.photo-strip img:nth-child(3) {
+  object-position: left 60%;
+}
+
+.sheet:first-child .print-header {
+  padding-block: 8.5mm;
+}
+
+.sheet:first-child .print-menu {
+  margin-top: 3mm;
+}
+
+.sheet:first-child .print-section {
+  margin-bottom: 3.5mm;
+}
+
+.sheet:first-child article {
+  padding-block: 1.15mm;
+}
+
+.sheet:first-child h3 {
+  font-size: 11.4pt;
+}
+
+.sheet:first-child article p {
+  font-size: 9.8pt;
+}
+
 .print-menu {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -141,20 +178,28 @@ h3 {
 }
 
 .print-menu-continuation {
-  margin-top: 2mm;
+  margin-top: 1mm;
 }
 
 .print-menu-continuation .print-section {
-  margin-bottom: 1.5mm;
+  margin-bottom: 1mm;
 }
 
 .print-menu-continuation article {
-  padding-block: 0.45mm;
+  padding-block: 0.25mm;
 }
 
 .print-menu-continuation .print-section header {
-  margin-bottom: 1mm;
-  padding-bottom: 0.8mm;
+  margin-bottom: 0.6mm;
+  padding-bottom: 0.5mm;
+}
+
+.print-menu-continuation h3 {
+  font-size: 11.3pt;
+}
+
+.print-menu-continuation article p {
+  font-size: 9.8pt;
 }
 
 .print-column {

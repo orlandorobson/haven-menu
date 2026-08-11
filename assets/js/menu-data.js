@@ -1,20 +1,20 @@
 window.HAVEN_MENU = {
   venue: {
     name: "Haven Cafe",
-    arabicName: "هيفن",
+    arabicName: "هيڤن",
     location: "Osara, Salalah",
     coffeeStatement: "Every Haven coffee is made with premium beans, roasted locally and selected with care.",
-    arabicCoffeeStatement: "تُحضّر جميع قهوة هيفن من حبوب فاخرة محمصة محليا ومختارة بعناية.",
+    arabicCoffeeStatement: "تُحضّر جميع قهوة هيڤن من حبوب فاخرة محمصة محليا ومختارة بعناية.",
     dessertStatement: "Our cakes and sweets are prepared locally for Haven by professional pastry chefs.",
-    arabicDessertStatement: "تُحضّر كيكات وحلويات هيفن محليا على أيدي طهاة حلويات محترفين."
+    arabicDessertStatement: "تُحضّر كيكات وحلويات هيڤن محليا على أيدي طهاة حلويات محترفين."
   },
   categories: [
     {
       id: "signature",
       name: "Haven Favourites",
-      arabicName: "مفضلات هيفن",
+      arabicName: "مفضلات هيڤن",
       description: "The drinks guests return to, led by Haven's own recipes.",
-      arabicDescription: "مشروبات يختارها ضيوفنا مرارا، وفي مقدمتها ابتكارات هيفن.",
+      arabicDescription: "مشروبات يختارها ضيوفنا مرارا، وفي مقدمتها ابتكارات هيڤن.",
       items: [
         {
           id: "spanish-latte-hot",
@@ -22,7 +22,7 @@ window.HAVEN_MENU = {
           arabicName: "سبانش لاتيه",
           description: "Espresso and milk with a measured sweetness.",
           arabicDescription: "إسبريسو وحليب بحلاوة متوازنة.",
-          price: 1.7,
+          price: 1.8,
           largePrice: 2,
           tags: ["Hot"],
           label: "Most Ordered",
@@ -46,13 +46,13 @@ window.HAVEN_MENU = {
         {
           id: "haven-cold-brew",
           name: "Haven Passion Fruit Cold Brew",
-          arabicName: "كولد برو هيفن بالباشن فروت",
+          arabicName: "كولد برو هيڤن بالباشن فروت",
           description: "Haven's original passion fruit recipe, created by our founding barista: a generous bottle of slow-steeped cold brew that pours two cups.",
-          arabicDescription: "وصفة هيفن الأصلية بالباشن فروت، ابتكرها باريستا هيفن المؤسس: زجاجة سخية من الكولد برو المنقوع ببطء تكفي لكوبين.",
+          arabicDescription: "وصفة هيڤن الأصلية بالباشن فروت، ابتكرها باريستا هيڤن المؤسس: زجاجة سخية من الكولد برو المنقوع ببطء تكفي لكوبين.",
           price: 2.5,
           tags: ["Iced"],
           label: "Haven Signature · Serves Two",
-          arabicLabel: "ابتكار هيفن · يكفي كوبين",
+          arabicLabel: "ابتكار هيڤن · يكفي كوبين",
           printDescription: true,
           featured: true
         }
@@ -90,7 +90,7 @@ window.HAVEN_MENU = {
           arabicName: "كراميل لاتيه",
           description: "Espresso and milk with caramel sweetness.",
           arabicDescription: "إسبريسو وحليب بحلاوة الكراميل.",
-          price: 1.7,
+          price: 1.8,
           largePrice: 1.9,
           tags: ["Hot"]
         },
@@ -100,7 +100,7 @@ window.HAVEN_MENU = {
           arabicName: "كراميل لاتيه مثلج",
           description: "Cold milk and espresso with caramel over ice.",
           arabicDescription: "حليب بارد وإسبريسو وكراميل فوق الثلج.",
-          price: 1.7,
+          price: 1.8,
           tags: ["Iced"]
         },
         {
@@ -120,6 +120,24 @@ window.HAVEN_MENU = {
           description: "Cold milk and espresso with hazelnut over ice.",
           arabicDescription: "حليب بارد وإسبريسو وبندق فوق الثلج.",
           price: 1.7,
+          tags: ["Iced"]
+        },
+        {
+          id: "pistachio-latte-hot",
+          name: "Pistachio Latte",
+          arabicName: "لاتيه بالفستق",
+          description: "Espresso and milk with smooth pistachio sweetness.",
+          arabicDescription: "إسبريسو وحليب بحلاوة الفستق الناعمة.",
+          price: 1.8,
+          tags: ["Hot"]
+        },
+        {
+          id: "pistachio-latte-iced",
+          name: "Iced Pistachio Latte",
+          arabicName: "لاتيه بالفستق مثلج",
+          description: "Cold milk and espresso with pistachio over ice.",
+          arabicDescription: "حليب بارد وإسبريسو وفستق فوق الثلج.",
+          price: 1.8,
           tags: ["Iced"]
         },
         {
@@ -243,7 +261,6 @@ window.HAVEN_MENU = {
           description: "A short, concentrated cup with a lasting coffee finish.",
           arabicDescription: "كوب قصير ومركز بنهاية قهوة تدوم.",
           price: 1,
-          largePrice: 1.2,
           tags: ["Hot"]
         },
         {
@@ -252,7 +269,7 @@ window.HAVEN_MENU = {
           arabicName: "كولد برو كلاسيك",
           description: "Coffee steeped slowly and served cold, with a deep, direct finish.",
           arabicDescription: "قهوة منقوعة ببطء وتقدم باردة بنهاية عميقة وواضحة.",
-          price: 1.8,
+          price: 2,
           tags: ["Iced"]
         }
       ]
@@ -374,7 +391,7 @@ window.HAVEN_MENU = {
           arabicName: "شاي بالحليب",
           description: "Hot black tea rounded with milk.",
           arabicDescription: "شاي أسود ساخن يلينه الحليب.",
-          price: 0.7,
+          price: 1,
           tags: ["Hot"]
         },
         {
@@ -447,7 +464,7 @@ window.HAVEN_MENU = {
           arabicName: "سموذي أساي",
           description: "A cold açaí blend with a tart dark-berry taste.",
           arabicDescription: "خليط أساي بارد بطعم التوت الداكن والحامض.",
-          price: 1.8,
+          price: 2,
           tags: ["Iced"]
         },
         {
@@ -531,7 +548,7 @@ window.HAVEN_MENU = {
       name: "Water",
       arabicName: "المياه",
       description: "Still water served chilled.",
-      arabicDescription: "مياه طبيعية تقدم باردة.",
+      arabicDescription: "مياه طبيعية وغازية تقدم باردة.",
       items: [
         {
           id: "still-water",
@@ -541,6 +558,15 @@ window.HAVEN_MENU = {
           arabicDescription: "مياه طبيعية باردة.",
           price: 0.2,
           tags: ["Iced"]
+        },
+        {
+          id: "sparkling-water",
+          name: "Sparkling Water",
+          arabicName: "مياه غازية",
+          description: "Chilled sparkling water.",
+          arabicDescription: "مياه غازية باردة.",
+          price: 1,
+          tags: ["Iced"]
         }
       ]
     },
@@ -549,15 +575,15 @@ window.HAVEN_MENU = {
       name: "Sweets & Cakes",
       arabicName: "الحلويات والكيك",
       description: "Prepared locally for Haven by professional pastry chefs.",
-      arabicDescription: "تحضّر محليا لهيفن على أيدي طهاة حلويات محترفين.",
+      arabicDescription: "تحضّر محليا لهيڤن على أيدي طهاة حلويات محترفين.",
       items: [
         {
           id: "san-sebastian",
           name: "San Sebastian Cheesecake",
           arabicName: "تشيز كيك سان سيباستيان",
           description: "Basque-style cheesecake with a caramelised top and soft centre, served with Haven's own homemade chocolate sauce.",
-          arabicDescription: "تشيز كيك باسكي بسطح مكرمل وقلب طري، يقدم مع صلصة الشوكولاتة المنزلية بوصفة هيفن الخاصة.",
-          price: 1.8,
+          arabicDescription: "تشيز كيك باسكي بسطح مكرمل وقلب طري، يقدم مع صلصة الشوكولاتة المنزلية بوصفة هيڤن الخاصة.",
+          price: 2,
           tags: ["Dessert"],
           label: "Guest Favourite",
           arabicLabel: "من مفضلات ضيوفنا",
@@ -568,9 +594,9 @@ window.HAVEN_MENU = {
           id: "brownie",
           name: "Brownie",
           arabicName: "براوني",
-          description: "A generous, deep brownie made by a specialist chef with high-quality chocolate, soft at the centre and served with premium vanilla ice cream.",
-          arabicDescription: "قطعة براوني سميكة وسخية، يصنعها شيف متخصص من شوكولاتة عالية الجودة، بقلب طري وتقدم مع آيس كريم فانيلا فاخر.",
-          price: 2.3,
+          description: "A generous brownie made by a specialist chef with high-quality chocolate, soft at the centre and served with vanilla ice cream and Haven's homemade chocolate sauce.",
+          arabicDescription: "قطعة براوني سميكة وسخية، يصنعها شيف متخصص من شوكولاتة عالية الجودة، بقلب طري، وتقدم مع آيس كريم فانيلا وصلصة شوكولاتة هيڤن المنزلية.",
+          price: 2.5,
           tags: ["Dessert"],
           label: "Guest Favourite",
           arabicLabel: "من مفضلات ضيوفنا",
@@ -581,13 +607,13 @@ window.HAVEN_MENU = {
         {
           id: "london-cake",
           name: "London Cake & Haven Chocolate Sauce",
-          arabicName: "كيكة لندن مع صلصة شوكولاتة هيفن",
+          arabicName: "كيكة لندن مع صلصة شوكولاتة هيڤن",
           description: "London Cake served with homemade chocolate sauce from Haven's own private recipe.",
-          arabicDescription: "كيكة لندن تقدم مع صلصة شوكولاتة منزلية من وصفة هيفن الخاصة.",
+          arabicDescription: "كيكة لندن تقدم مع صلصة شوكولاتة منزلية من وصفة هيڤن الخاصة.",
           price: 2.5,
           tags: ["Dessert"],
           label: "New at Haven",
-          arabicLabel: "جديد في هيفن",
+          arabicLabel: "جديد في هيڤن",
           printDescription: true,
           featured: true
         },

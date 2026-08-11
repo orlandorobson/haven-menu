@@ -51,7 +51,7 @@
   const renderHeader = (compact = false) => `
     <header class="print-header${compact ? " print-header-compact" : ""}">
       <div>
-        <p lang="ar" dir="rtl">هيفن</p>
+        <p lang="ar" dir="rtl">${data.venue.arabicName}</p>
         <h1>HAVEN</h1>
       </div>
       <span>${compact ? "Menu continued" : "Osara, Salalah"}</span>
